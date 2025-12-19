@@ -1,0 +1,371 @@
+/* ===================================================
+   1. VARIABLES DE MARCA
+=================================================== */
+
+/* Colores de establecidos durante el estudio*/
+:root {
+  --color-black: #1A1A1A;
+  /*--color-gray: #505050;
+  --color-light: #E8E4D8;
+  --color-accent: #D35400;*/
+
+  --color-geigclaro: #DBC3A7;
+  --color-chocolate: #302521;
+  --color-beigoscuro: #896459;
+  --color-marronclaro: #826E60;
+  --color-marronoscuro: #4A4041;
+  --color-azuloscuro: #506DA3;
+  --color-azulclaro: #6BB0F3;
+
+  --font-primary: 'Inter', Arial, sans-serif;
+
+  --max-width: 1200px;
+}
+
+
+/* ===================================================
+   2. RESET Y ESTILOS BASE
+=================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-primary);
+  color: var(--color-black);
+  background-color: var(--color-geigclaro);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+/* ===================================================
+   3. TIPOGRAFÍA
+=================================================== */
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+
+/* ===================================================
+   4. LAYOUT GENERAL
+=================================================== */
+
+main {
+  padding: 1.5rem;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+
+/* ===================================================
+   5. ENCABEZADO Y NAVEGACIÓN
+=================================================== */
+
+.site-header {
+  background-color: var(--color-chocolate);
+  color: #ffffff;
+}
+
+.header-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.logo{
+  width: 20%;
+}
+
+.slogan {
+  font-weight: 700;
+  font-size: 1.2rem;
+  width: 50%;
+  
+}
+
+.main-nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.main-nav a {
+  padding: 0.5rem;
+}
+
+.main-nav a:focus-visible,
+.main-nav a:hover {
+  outline: 2px solid var(--color-geigclaro);
+}
+
+
+
+/* ===================================================
+   6. COMPONENTES REUTILIZABLES
+=================================================== */
+
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  font-weight: 600;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: var(--color-marronclaro);
+  color: #ffffff;
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible {
+  background-color: var(--color-marronoscuro);;
+}
+
+.btn-secondary {
+  border: 2px solid var(--color-marronoscuro);
+  background-color: var(--color-marronclaro);
+  color: #ffffff;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus-visible {
+  background-color: var(--color-marronoscuro);
+  color: #ffffff;
+}
+
+.icono{
+  width: 30px;
+  height: 30px;
+}
+
+/* ===================================================
+   7. HOME – SECCIONES ESPECÍFICAS
+=================================================== */
+
+.hero {
+  background-color: var(--color-gray);
+  color: #ffffff;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  /* Con las siguientes líneas posicionamos el botón de acción en la parte 
+  inferior del contenedor div */
+  display: flex;
+  align-items: flex-end;      
+  width: 100%;
+  height: 300px;
+   /* Ruta de tu imagen */
+  background-image: url('../assets/images/Panorama_Teide_BW.jpg');
+  /* 'cover' para que cubra todo el div, 'contain' para que quepa entera */
+  background-size: cover; 
+  /* Centra la imagen */
+  background-position: center; 
+  /* Evita que la imagen se repita */
+  background-repeat: no-repeat; 
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 1rem auto 2rem;  
+}
+
+.intro {
+  max-width: 700px;
+}
+
+.seccion .seccion_lista {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.tarjeta_sin_borde {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 6px;
+}
+/*
+.que_hacemos .que_hacemos_lista {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.actividades_destacadas .actividades_destacadas_lista {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}*/
+
+.tarjeta_con_borde {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 6px;
+  border-color: var(--color-chocolate);
+  border-width: 3px;
+  border-style: solid;
+}
+/*
+.testimonios .testimonios_lista {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}*/
+
+.community-preview {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.cta {
+  background-color: var(--color-black);
+  color: #ffffff;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;    
+}
+
+
+/* ===================================================
+   8. PIÉ DE PÁGINA
+=================================================== */
+
+.pie_del_sitio {
+  background-color: var(--color-chocolate);
+  color: #ffffff;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.web-menu {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+
+.pie_menu_de_lista{
+  width: 25%;
+}
+
+.icono_con_texto {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  align-items: center;
+  border: #896459;
+  border-style: solid;
+  border-radius: 5px;
+  width: 50%;  
+  padding: 3px;
+}
+
+.texto_del_icono {
+  font-size: 1.5rem;
+  margin-block-start: 0px;
+  margin-block-end: 0px;  
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+
+/* ===================================================
+   9. MEDIA QUERIES – VERSIÓN DE ESCRITORIO
+=================================================== */
+
+@media (min-width: 768px) {
+
+  .header-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .main-nav ul {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+
+  main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+
+  .seccion .seccion_lista {
+    flex-direction: row;
+  }
+
+  .tarjeta_sin_borde {
+    flex: 1;
+  }
+  
+  .tarjeta_con_borde {
+    flex: 1;
+  }
+  /*.que_hacemos .que_hacemos_lista {
+    flex-direction: row;
+  }*/
+    
+  /*
+  .actividades_destacadas .actividades_destacadas_lista {
+    flex-direction: row;
+  }
+
+  .actividades_destacadas_tarjeta {
+    flex: 1;
+  }
+
+  .testimonios .testimonios_lista {
+    flex-direction: row;
+  }*/
+
+}
