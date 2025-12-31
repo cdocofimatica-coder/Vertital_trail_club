@@ -4,21 +4,23 @@
 
 /* Colores de establecidos durante el estudio*/
 :root {
-  --color-black: #1A1A1A;
-  /*--color-gray: #505050;
-  --color-light: #E8E4D8;
-  --color-accent: #D35400;*/
+  /* Neutros */
+  --color-bg: #FAFAF9;
+  --color-white: #FFFFFF;
+  --color-text-main: #2E2E2E;
+  --color-text-muted: #7A7A7A;
 
-  --color-geigclaro: #DBC3A7;
-  --color-chocolate: #302521;
-  --color-beigoscuro: #896459;
-  --color-marronclaro: #826E60;
-  --color-marronoscuro: #4A4041;
-  --color-azuloscuro: #506DA3;
-  --color-azulclaro: #6BB0F3;
+  /* Marca */
+  --color-primary: #2AAE8A;
+  --color-primary-hover: #27896F;
+  --color-secondary: #F4C95D;
 
+  /* Superficies */
+  --color-surface: #EDEBE6;
+  --color-surface-alt: #D9EFE8;
+
+  /* Tipografía y layout */
   --font-primary: 'Inter', Arial, sans-serif;
-
   --max-width: 1200px;
 }
 
@@ -36,8 +38,8 @@
 body {
   margin: 0;
   font-family: var(--font-primary);
-  color: var(--color-black);
-  background-color: var(--color-geigclaro);
+  color: var(--color-text-main);
+  background-color: var(--color-bg);
   line-height: 1.6;
 }
 
@@ -101,12 +103,14 @@ section {
 =================================================== */
 
 .site-header {
-  background-color: var(--color-chocolate);
-  color: #ffffff;
+  background-color: var(--color-text-main);
+  color: var(--color-white);
+  width: 100%;
 }
 
 .header-container {
-  max-width: var(--max-width);
+  /*max-width: var(--max-width);*/
+  width: 100%;
   margin: 0 auto;
   padding: 1rem;
 
@@ -149,7 +153,7 @@ section {
 
 .main-nav a:focus-visible,
 .main-nav a:hover {
-  outline: 2px solid var(--color-geigclaro);
+  outline: 2px solid var(--color-secondary);
 }
 
 
@@ -168,25 +172,25 @@ section {
 }
 
 .btn-primary {
-  background-color: var(--color-marronclaro);
-  color: #ffffff;
+  background-color: var(--color-primary);
+  color: var(--color-white);
 }
 
 .btn-primary:hover,
 .btn-primary:focus-visible {
-  background-color: var(--color-marronoscuro);;
+  background-color: var(--color-primary-hover);;
 }
 
 .btn-secondary {
-  border: 2px solid var(--color-marronoscuro);
-  background-color: var(--color-marronclaro);
-  color: #ffffff;
+  border: 2px solid var(--color-primary);
+  background-color: transparent;
+  color: var(--color-primary);
 }
 
 .btn-secondary:hover,
 .btn-secondary:focus-visible {
-  background-color: var(--color-marronoscuro);
-  color: #ffffff;
+  background-color: var(--color-primary);
+  color: var(--color-white);
 }
 
 .icono{
@@ -207,8 +211,8 @@ section {
 =================================================== */
 
 .hero {
-  background-color: var(--color-gray);
-  color: #ffffff;
+  background-color: var(--color-text-main);
+  color: var(--color-white);
   padding: 3rem 1.5rem;
   text-align: center;
   /* Con las siguientes líneas posicionamos el botón de acción en la parte 
@@ -259,7 +263,7 @@ section {
 .hero-content h2{
   font-size: 3rem;
   /*He utilizado un color RGBA para aplicar transparencia únicamente al fondo, manteniendo la legibilidad del texto*/
-  background-color: rgba(130, 110, 96, 0.5);
+  background-color: rgba(42, 174, 138, 0.5);
   margin-top: 0;
   border-radius: 5px;
   padding: 5px;  
@@ -298,13 +302,19 @@ section {
   gap: 1.5rem;
 }
 
+.seccion .seccion_lista_rutas {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
 .seccion .seccion_lista_testimonios {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
 }
 
-.seccion .seccion_lista_historias {
+.seccion .seccion_lista_historia {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
@@ -335,7 +345,7 @@ section {
 }
 
 .tarjeta_sin_borde {
-  background-color: #ffffff;
+  background-color: var(--color-white);
   padding: 1.5rem;
   border-radius: 6px;
 }
@@ -372,10 +382,10 @@ section {
 }*/
 
 .tarjeta_con_borde {
-  background-color: #ffffff;
+  background-color: var(--color-white);
   padding: 1.5rem;
   border-radius: 6px;
-  border-color: var(--color-chocolate);
+  border-color: var(--color-primary);
   border-width: 3px;
   border-style: solid;
 }
@@ -396,7 +406,7 @@ section {
 
 .persona{
   position: relative;
-  width: 250px;
+  width: 170px;
   height: 300px;
   overflow: hidden;
   border-radius: 10px;
@@ -420,8 +430,8 @@ section {
   position: absolute;
   bottom: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  color: #ffffff;
+  background: rgba(46, 46, 46, 0.6);
+  color: var(--color-white);
   padding: 10px;
   text-align: center;
 }
@@ -436,8 +446,8 @@ section {
   position: absolute;
   bottom: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  color: #ffffff;
+  background: rgba(46, 46, 46, 0.6);
+  color: var(--color-white);
   padding: 10px;
   text-align: center;
 }
@@ -479,8 +489,8 @@ section {
 }
 
 .cta {
-  background-color: var(--color-black);
-  color: #ffffff;
+  background-color: var(--color-primary);
+  color: var(--color-white);
   padding: 2.5rem 1.5rem;
   text-align: center;
 }
@@ -496,8 +506,8 @@ section {
 =================================================== */
 
 .pie_del_sitio {
-  background-color: var(--color-chocolate);
-  color: #ffffff;
+  background-color: var(--color-text-main);
+  color: var(--color-white);
   text-align: center;
   padding: 1.5rem;
   font-size: 0.9rem;
@@ -518,12 +528,12 @@ section {
   flex-direction: row;
   /*gap: 1.5rem;*/
   align-items: center;
-  border: #896459;
+  border: var(--color-primary);
   border-style: solid;
   border-radius: 5px;
   width: 25%;  
   padding: 0px;
-  background-color: #DBC3A7;
+  background-color: var(--color-surface);
 }
 
 .texto_del_icono {
@@ -584,6 +594,12 @@ section {
     grid-template-columns: repeat(3, 1fr);
   }
 
+  .seccion .seccion_lista_rutas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
   .seccion .seccion_lista_testimonios{
     grid-template-columns: repeat(3, 1fr);
   }
@@ -595,6 +611,7 @@ section {
 
   .tarjeta_sin_borde .equipo{
     grid-template-columns: repeat(4, 1fr);
+    align-items: baseline;
     gap: 20px;
   }
 
@@ -611,24 +628,30 @@ section {
     flex: 1;
   }
 
-  .icono_con_texto {
+  /*.icono_con_texto {
     display: flex;
     flex-direction: row;
     gap: 1.5rem;
     align-items: center;
-    border: #896459;
+    color: var(--color-text-main);
     border-style: solid;
     border-radius: 5px;
     width: 60%;  
     padding: 3px;
     color: #DBC3A7;
+  }*/
+  .icono_con_texto {
+    width: 60%;
+    padding: 3px;
+    color: var(--color-text-main);
   }
-
+  
   .icono_con_texto a{
     display: flex;
     flex-direction: row;
   }
 
+/*
   .texto_del_icono {  
     font-family: var(--font-primary);
     font-size: 1.5rem;
@@ -638,6 +661,12 @@ section {
     text-align: center;    
     display: flex;
     color: #1A1A1A;
+  }*/
+
+  .texto_del_icono {
+    font-size: 1.5rem;
+    display: flex;
+    color: var(--color-text-main);
   }
   /*.que_hacemos .que_hacemos_lista {
     flex-direction: row;
