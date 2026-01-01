@@ -22,6 +22,9 @@
   /* Tipografía y layout */
   --font-primary: 'Inter', Arial, sans-serif;
   --max-width: 1200px;
+
+  /*Niveles*/
+  --color-alta: #ff0000;
 }
 
 
@@ -109,11 +112,9 @@ section {
 }
 
 .header-container {
-  /*max-width: var(--max-width);*/
-  width: 100%;
+  max-width: var(--max-width);
   margin: 0 auto;
   padding: 1rem;
-
   display: flex;
   flex-direction: column;  
   gap: 1rem;
@@ -206,6 +207,34 @@ section {
   font-style: italic;
   line-height: 1.6;
 }
+
+.nivel-dificultad.media {
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nivel-dificultad.baja {
+  color: var(--color-secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nivel-dificultad.alta {
+  color: var(--color-alta);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.icono-dificultad {
+  width: 30px;
+  height: 30px;
+  background-color: var(--color-primary-hover);
+  border-radius: 3px;
+}
 /* ===================================================
    7. HOME – SECCIONES ESPECÍFICAS
 =================================================== */
@@ -280,75 +309,99 @@ section {
 
 .seccion .seccion_lista {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: 1fr;
+  gap: 20px;
 }
 
 .seccion .seccion_lista_acceso {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: 1fr;
+  gap: 20px;
 }
 
 .seccion .seccion_lista_que {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: 1fr;
+  gap: 20px;
 }
 
 .seccion .seccion_lista_actividades {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: 1fr;
+  gap: 20px;
 }
 
 .seccion .seccion_lista_rutas {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.5rem;
+  gap: 20px;
 }
 
 .seccion .seccion_lista_testimonios {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: 1fr;
+  gap: 20px;
 }
 
 .seccion .seccion_lista_historia {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.5rem;
+  gap: 20px;
+}
+
+.historia{
+  position: relative;
+  padding: 3rem 1.5rem;
+  background-image: url('../assets/images/Historia-01.JPG');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+}
+
+/* Capa de contraste */
+.historia::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.historia-contenido {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .seccion .seccion_lista_cronica {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.5rem;
+  gap: 20px;
 }
 
 .seccion .seccion_lista_equipo {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
+  gap: 20px;
   justify-items: center;
 }
 
 .seccion .seccion_lista_galeria {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: 1fr;
+  gap: 20px;
 }
 
 .seccion .seccion_lista_videos {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.5rem;
+  gap: 20px;
 }
 
 .seccion .seccion_lista_historias {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: 1fr;
+  gap: 20px;
 }
 
 .tarjeta_sin_borde {
@@ -362,6 +415,88 @@ section {
   padding: 1.5rem;
   border-radius: 6px;
   border: 3px, solid, var(--color-primary);
+}
+
+.actividad{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--color-white);
+  position: relative;
+}
+
+/*Capa para que el texto sea legible*/
+.actividad::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 6px;
+}
+
+.actividad > * {
+  position: relative;
+}
+
+/* Fondos individuales */
+.ruta-infierno {
+  background-image: url('../assets/images/Actividades-BarrancoDelInfierno.jpg');
+}
+
+.ruta-anaga {
+  background-image: url('../assets/images/Actividades-AnagaChinamada.jpg');
+}
+
+.ruta-sentidos {
+  background-image: url('../assets/images/Actividades-SenderoSentidos.jpg');
+}
+
+.quehacemos-01{
+  background-image: url('../assets/images/QueHacemos-01.jpg');
+}
+
+.quehacemos-02{
+  background-image: url('../assets/images/QueHacemos-02.jpg');
+}
+
+.quehacemos-03{
+  background-image: url('../assets/images/QueHacemos-03.jpg');
+}
+
+.accesorapido-01{
+  background-image: url('../assets/images/AccesoRapido-01.jpg');
+}
+
+.accesorapido-02{
+  background-image: url('../assets/images/AccesoRapido-02.jpg');
+}
+
+.accesorapido-03{
+  background-image: url('../assets/images/AccesoRapido-03.jpg');
+}
+
+.galeria-01{
+  background-image: url('../assets/images/Galeria-01-Samarines-Candelaria-Tenerife.jpg');
+  height: 400px;
+}
+
+.galeria-02{
+  background-image: url('../assets/images/Galeria-02-Monte-del-Agua.jpg');
+  height: 400px;
+}
+
+.galeria-03{
+  background-image: url('../assets/images/Galeria-03-MontañaChinyero-ElTanque.webp');
+  height: 400px;
+}
+
+.galeria-04{
+  background-image: url('../assets/images/Galeria-04-BarrandoDelInfierno.webp');
+  height: 400px;
+}
+
+.testimonio {
+  text-align: left;
 }
 
 /*.seccion_lista .izquierda{
@@ -510,12 +645,19 @@ section {
    8. PIÉ DE PÁGINA
 =================================================== */
 
-.pie_del_sitio {
+.pie_del_sitio {  
   background-color: var(--color-text-main);
   color: var(--color-white);
-  text-align: center;
-  padding: 1.5rem;
-  font-size: 0.9rem;
+  width: 100%;
+}
+
+.footer-container {
+  max-width: var(--max-width);  
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;  
+  gap: 1rem;
 }
 
 .web-menu {
@@ -585,37 +727,52 @@ section {
 
   .seccion .seccion_lista{
     grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
   }
 
   .seccion .seccion_lista_acceso{
     grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
   }
 
   .seccion .seccion_lista_que{
     grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
   }
 
   .seccion .seccion_lista_actividades{
     grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
   }
 
   .seccion .seccion_lista_rutas {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
+    gap: 20px;
   }
 
   .seccion .seccion_lista_testimonios{
     grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
   }
 
   .seccion .seccion_lista_historia {    
-    grid-template-columns: 70% 30%;
+    grid-template-columns: 1fr;
     gap: 20px;
   }
 
   .seccion .seccion_lista_equipo{
     grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  .seccion .seccion_lista_galeria{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .seccion .seccion_lista_historias{
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
 
@@ -672,6 +829,17 @@ section {
     display: flex;
     color: var(--color-text-main);
   }
+
+  .historia-contenido {
+    column-count: 2;
+    column-gap: 3rem;
+  }
+
+  .historia-contenido h2 {
+    column-span: all;
+    margin-bottom: 2rem;
+  }
+
   /*.que_hacemos .que_hacemos_lista {
     flex-direction: row;
   }*/
