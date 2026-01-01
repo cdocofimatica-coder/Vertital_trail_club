@@ -46,11 +46,11 @@ body {
   line-height: 1.6;
 }
 
-img {
-  /*max-width: 100%;
+/*img {
+  max-width: 100%;
   height: auto;
-  display: block;*/
-}
+  display: block;
+}*/
 
 a {
   color: inherit;
@@ -858,5 +858,6 @@ img .icono-dificultad{
   }*/
 
 }
+
 
 
