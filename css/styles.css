@@ -293,7 +293,7 @@ section {
   padding: 5px;  
 }*/
 
-.hero-content h2{
+.hero-content h1{
   font-size: 3rem;
   /*He utilizado un color RGBA para aplicar transparencia únicamente al fondo, manteniendo la legibilidad del texto*/
   background-color: rgba(42, 174, 138, 0.5);
