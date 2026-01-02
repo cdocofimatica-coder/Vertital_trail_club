@@ -429,6 +429,12 @@ section {
   position: relative;
 }
 
+/*Para que el icono y el texto estén en la misma línea*/
+.actividad .nivel-dificultad{
+  display: flex;
+  gap: 10px;
+}
+
 /*Capa para que el texto sea legible*/
 .actividad::before {
   content: "";
