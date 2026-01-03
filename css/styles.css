@@ -141,13 +141,6 @@ section {
   width: 50%;  
 }
 
-/*.main-nav ul {
-  display: flex;
-  flex-direction: row;
-  gap: 0.5rem;
-  text-align: center;
-}*/
-
 .main-nav a {
   padding: 0.5rem;  
 }
@@ -260,12 +253,6 @@ section {
   gap: 0.5rem;
 }
 
-/*.icono-dificultad{
-  width: 30px;
-  height: 30px;
-  background-color: var(--color-primary-hover);
-  border-radius: 3px;
-}*/
 /* ===================================================
    7. HOME – SECCIONES ESPECÍFICAS
 =================================================== */
@@ -312,13 +299,6 @@ section {
   background-image: url('../assets/images/Cabecera_comunidad.jpg');
   align-items: start;
 }
-/*.about h2{
-  font-size: 3rem;
-  background-color: rgba(130, 110, 96, 0.5);
-  margin: 0;
-  border-radius: 5px;  
-  padding: 5px;  
-}*/
 
 .hero-content h1{
   font-size: 3rem;
@@ -544,36 +524,10 @@ section {
   text-align: left;
 }
 
-/*.seccion_lista .izquierda{
-  max-width: 70%;
-}
-
-.seccion_lista .derecha{
-  max-width: 30%;
-}*/
-
-/*.historia{
-  display: grid;
-  grid-template-columns: 70% 30%;
-  gap: 20px;
-}*/
-
 .tarjeta_sin_borde .filosofia{
   max-width: 50%;
   grid-template-columns: repeat(2, 1fr);
 }
-/*
-.que_hacemos .que_hacemos_lista {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.actividades_destacadas .actividades_destacadas_lista {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}*/
 
 .redondo{
   border-radius: 90px;
@@ -635,16 +589,6 @@ section {
   object-fit: cover;
 }
 
-/*.video_datos{
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background: rgba(46, 46, 46, 0.6);
-  color: var(--color-white);
-  padding: 10px;
-  text-align: center;
-}*/
-
 .equipo_datos h3{
   margin: 0;
   font-size: 18px;
@@ -654,28 +598,9 @@ section {
   margin: 5px 0 0;
   font-size: 14px;
 }
-/*
-.perfil{
-  display: flex;
-  align-items: flex-end;      
-  width: 100%; 
-  /*padding: 3rem 1.5rem;
-  text-align: center; 
-}*/
-/*
-.foto_perfil{
-  border-radius: 20px;
-  max-width: 90%;  
-}*/
-/*
-.testimonios .testimonios_lista {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}*/
 
 .community-preview {
-  background-color: #ffffff;
+  background-color: var(--color-white);
   padding: 2rem;
   border-radius: 6px;
   text-align: center;
@@ -846,18 +771,6 @@ section {
     flex: 1;
   }
 
-  /*.icono_con_texto {
-    display: flex;
-    flex-direction: row;
-    gap: 1.5rem;
-    align-items: center;
-    color: var(--color-text-main);
-    border-style: solid;
-    border-radius: 5px;
-    width: 60%;  
-    padding: 3px;
-    color: #DBC3A7;
-  }*/
   .icono_con_texto {
     width: 60%;
     padding: 3px;
@@ -868,18 +781,6 @@ section {
     display: flex;
     flex-direction: row;
   }
-
-/*
-  .texto_del_icono {  
-    font-family: var(--font-primary);
-    font-size: 1.5rem;
-    margin-block-start: 0px;
-    margin-block-end: 0px;  
-    margin-bottom: 0px;
-    text-align: center;    
-    display: flex;
-    color: #1A1A1A;
-  }*/
 
   .texto_del_icono {
     font-size: 1.5rem;
@@ -909,22 +810,5 @@ section {
     flex-direction: row;
     gap: 1.5rem;
   }
-
-  /*.que_hacemos .que_hacemos_lista {
-    flex-direction: row;
-  }*/
-    
-  /*
-  .actividades_destacadas .actividades_destacadas_lista {
-    flex-direction: row;
-  }
-
-  .actividades_destacadas_tarjeta {
-    flex: 1;
-  }
-
-  .testimonios .testimonios_lista {
-    flex-direction: row;
-  }*/
 
 }
