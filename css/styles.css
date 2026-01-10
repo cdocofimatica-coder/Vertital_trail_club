@@ -573,8 +573,8 @@ section {
 
 .persona{
   position: relative;
-  width: 150px;
-  height: 270px;
+  width: 125px;
+  height: 230px;
   overflow: hidden;
   border-radius: 10px;
 }
