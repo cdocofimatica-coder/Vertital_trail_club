@@ -77,7 +77,7 @@ h3 {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 1.75rem;
 }
 
 h2 {
@@ -732,9 +732,6 @@ section {
   width: 220px;
   height: 180px;
   background-image: url("../assets/images/Logotipo-horizontal.jpg");
-  /*background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;*/
 }
 
   .main-nav ul {
